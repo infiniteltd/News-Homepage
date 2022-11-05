@@ -13,8 +13,8 @@ body {
 }
 
 hr {
+    border-bottom: 1px solid hsl(236, 13%, 42%);;
     margin: 1rem;
-    color: hsl(236, 13%, 42%);
 }
 
 main .container {
@@ -139,7 +139,7 @@ main .contain .caption h1 {
     font-size: 34px;
 }
 main .contain .read{
-    display: flex;
+    display: inline-block;
     align-items: center;
     flex-direction: column;
 }
@@ -151,6 +151,7 @@ main .contain .read p {
 }
 
 main .contain .read .btn {
+    display: inline-block;
     border: transparent;
     background-color: hsl(240, 100%, 5%);
     padding: 0.5rem 1.2rem ;
