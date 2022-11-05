@@ -59,9 +59,20 @@ main .head {
     cursor: pointer;
 }
 
-#links a:hover {
+#links a:hover,
+#links li a:active {
     color: hsl(5, 85%, 63%);
     transition: 0.2s ease-in-out;
+}
+
+#links li a.active::after,
+#links li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
 }
 
 main #main-page {
@@ -87,7 +98,7 @@ main .contain .desktop {
 main .min-caption {
     background-color: hsl(240, 100%, 5%);
     margin: 1rem;
-    height: 80vh;
+    height: 76vh;
     color: #fff;
     padding: 1.5rem;
 }
@@ -142,14 +153,22 @@ main .contain .read p {
 main .contain .read .btn {
     border: transparent;
     background-color: hsl(240, 100%, 5%);
-    padding: 0.8rem;
+    padding: 0.5rem 1.2rem ;
     color: #fff;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
+main .contain .read .btn a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+main .contain .read .btn a:hover {
+    color: rgba(4, 3, 71, 0.849);
+}
 main .contain .read .btn:hover {
     background-color: hsl(5, 85%, 63%);
-    color: rgba(4, 3, 71, 0.849);
+    
 }
 
 main .sub-main {
@@ -190,6 +209,51 @@ main .sub-main .caption-1 p {
 /* media queries */
 
 @media (max-width: 799px) {
+    #links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -18.75rem;
+        height: 100vh;
+        width: 20rem;
+        background-color: #e3e6f3;
+        padding: 5rem 0 0 0.5rem;
+        transition: 0.3s;
+    } 
+    #links.active{
+        right: 10rem;
+    }
+    #links li {
+        margin-bottom: 1.563rem;
+    }
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+     #close {
+        display: inherit;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 477px) {
+    main .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     #links {
         display: flex;
         flex-direction: column;
