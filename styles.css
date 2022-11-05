@@ -216,7 +216,7 @@ main .sub-main .caption-1 p {
         justify-content: flex-start;
         position: fixed;
         top: 0;
-        right: -18.75rem;
+        right: -22rem;
         height: 100vh;
         width: 20rem;
         background-color: #e3e6f3;
@@ -224,7 +224,7 @@ main .sub-main .caption-1 p {
         transition: 0.3s;
     } 
     #links.active{
-        right: 10rem;
+        right: 0;
     }
     #links li {
         margin-bottom: 1.563rem;
